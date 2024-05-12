@@ -149,16 +149,8 @@ function show(array) {
 }
 
 show(board);
-window.addEventListener('keydown', function (event) {
-    if (event.key == 'w') {
-        board = move(board, 'up');
-    } else if (event.key == 's') {
-        board = move(board, 'down');
-    } else if (event.key == 'a') {
-        board = move(board, 'left');
-    } else if (event.key == 'd') {
-        board = move(board, 'right');
-    }
-    console.log(event.key);
-    show(board);
-})
+
+function c(direction) {
+    board = move(board, direction);
+    show(board)
+}

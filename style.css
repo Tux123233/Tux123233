@@ -1,44 +1,56 @@
 @font-face {
     font-family: "siyuan";
-    src: url("./SourceHanSansSC-Bold-2.otf");
+    src: url('./SourceHanSansSC-Bold-2.otf');
 }
 
 * {
-    font-family: "siyuan";
+    font-family: 'siyuan';
 }
 
 #board {
-    width: 500px;
-    height: 500px;
+    width: calc(100vw * 0.7);
+    height: calc(100vw * 0.7);
     background-color: #bbada0;
     margin: auto;
     position: relative;
     top: calc((100vh - 500px) / 2);
     border-radius: 8px;
-    padding: 15px;
+    padding: calc(100vw * 0.7 * 0.05);
     box-sizing: border-box;
     box-shadow: 0px 0px 10px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #board ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 #board li {
-    width: 106px;
-    height: 106px;
+    width: calc(100vw * 0.7 / 5.5);
+    height: calc(100vw * 0.7 / 5.5);
     background-color: #cdc1b4;
-    margin-right: 15px;
-    float: left;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    font-size: 40px;
+    font-size: auto;
     text-align: center;
-    line-height: 106px;
+    line-height: calc(100vw * 0.7 / 5);
+    border-radius: 5px;
+    line-height: calc(100vw * 0.7 / 5.5);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #board li:last-child {
     margin: 0;
+}
+
+#control {
+    margin-top: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
 }
