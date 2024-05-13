@@ -50,7 +50,40 @@
 
 #control {
     margin-top: 300px;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-around;
+}
+
+#control img {
+    background-color: #cdc1b4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#control img:active {
+    animation: am 0.1s ease;
+}
+
+@keyframes am {
+    to {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+#again {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: calc((100vw - 70px) / 2);
+    background-color: #cdc1b4;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    top: 100px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#again:active {
+    animation: am 0.1s ease;
 }

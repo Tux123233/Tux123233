@@ -2,7 +2,7 @@ let board = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
-    [0, 0, 0, 0],
+    [0, 0, 0, 0]
 ]
 
 function empty_count(array) {
@@ -138,11 +138,11 @@ function show(array) {
             } else if (array[i][j] == 1024) {
                 document.getElementById(name).style.backgroundColor = "#edc53f";
                 document.getElementById(name).style.color = "#f9f6f2";
-                document.getElementById(name).style.fontSize = '33px';
+                document.getElementById(name).style.fontSize = '16px';
             } else if (array[i][j] == 2048) {
                 document.getElementById(name).style.backgroundColor = "#edc22e";
                 document.getElementById(name).style.color = "#f9f6f2";
-                document.getElementById(name).style.fontSize = '33px';
+                document.getElementById(name).style.fontSize = '16px';
             }
         }
     }
@@ -154,3 +154,14 @@ function c(direction) {
     board = move(board, direction);
     show(board)
 }
+
+function clean() {
+    board = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ]
+    show(board);
+}
+
